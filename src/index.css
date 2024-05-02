@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: "Roboto", sans-serif;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+a {
+  cursor: pointer;
+  width: fit-content;
+}
+
+@layer components {
+  .containers {
+    @apply w-[90%] lg:w-[85%] max-w-7xl mx-auto py-14
+  }
+  .btn_primary {
+    @apply flex items-center gap-2 py-4 px-12 bg-gradient-to-l hover:from-primary hover:to-black to-primary from-black rounded-full transition duration-700
+  }
+}
